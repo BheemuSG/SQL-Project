@@ -634,4 +634,8 @@ SQL> select sum(Runs) as Total_Runs from RohitSharma_Batting;
 SQL> select sum(Runs) as Total_Runs from ShubmanGill_Batting;
 SQL> select sum(Runs) as Total_Runs from ViratKohil_Batting;
 
+# Total International Wickets of Bowler.
+SQL> select sum(Wickets) as International_Wickets from KuldeepYadav_Bowling where format IN ('ODI', 'Test', 'T20I');
+SQL> select sum(Wickets) as International_Wickets from RavichandranAshwin_Bowling where format IN ('ODI', 'Test', 'T20I');
+SQL> select sum(Wickets) as International_Wickets from HardikPandya_Bowling where format IN ('ODI', 'Test', 'T20I');
 

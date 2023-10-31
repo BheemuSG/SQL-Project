@@ -630,5 +630,8 @@ SQL> select (Runs/(Balls/6)) as Bowling_Average from HardikPandya_Bowling;
 SQL> select (Runs/(Balls/6)) as Bowling_Average from ShardulThakur_Bowling;
 
 #Total Runs of Batter.
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from RohitSharma_Batting;
+SQL> select sum(Runs) as Total_Runs from RohitSharma_Batting;
+SQL> select sum(Runs) as Total_Runs from ShubmanGill_Batting;
+SQL> select sum(Runs) as Total_Runs from ViratKohil_Batting;
+
 

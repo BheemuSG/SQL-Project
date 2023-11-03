@@ -1,641 +1,115 @@
-# SQL-Project
-# Indian Squad For ICC World Cup 2023.
-
-SQL> create table Indian_Squad_WC2023
-(
-Name_of_the_Player varchar(30),
-Jersey_No Number(3), 
-Role Varchar(18)
-);
-
-SQL> insert into Indian_Squad_WC2023 values('Rohit Sharma', 45, 'Batter' );
-SQL> insert into Indian_Squad_WC2023 values('Virat Kohli', 18, 'Batter' );
-SQL> insert into Indian_Squad_WC2023 values('Suryakumar Yadav', 69, 'Batter' );
-SQL> insert into Indian_Squad_WC2023 values('Shubman Gill', 77, 'Batter' );
-SQL> insert into Indian_Squad_WC2023 values('Shreyas Iyer', 96, 'Batter' );
-SQL> insert into Indian_Squad_WC2023 values('Hardik Pandya', 33, 'Batting Allrounder' );
-SQL> insert into Indian_Squad_WC2023 values('Ravindra Jadeja', 8, 'Bowling Allrounder' );
-SQL> insert into Indian_Squad_WC2023 values('Ravichandran Ashwin', 99, 'Bowling Allrounder');
-SQL> insert into Indian_Squad_WC2023 values('KL Rahul', 1, 'WK-Batter');
-SQL> insert into Indian_Squad_WC2023 values('Ishan Kishan', 32, 'WK-Batter');
-SQL> insert into Indian_Squad_WC2023 values('Jasprit Bumrah', 93, 'Bowler');
-SQL> insert into Indian_Squad_WC2023 values('Shardul Thakur', 54, 'Bowler');
-SQL> insert into Indian_Squad_WC2023 values('Mohammed Shami', 11, 'Bowler');
-SQL> insert into Indian_Squad_WC2023 values('Mohammed Siraj', 13, 'Bowler');
-SQL> insert into Indian_Squad_WC2023 values('Kuldeep Yadav', 23, 'Bowler');
-SQL> update Indian_Squad_WC2023 set Name_of_The_Player='Rohit Sharma(C)' where Jersey_No=45;
-SQL> update Indian_Squad_WC2023 set Name_of_The_Player='Hardik Pandya(VC)' where Jersey_No=33;
-SQL>Commit;
-
-# Rohit Sharma Batting Career
-SQL> create table RohitSharma_Batting
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into RohitSharma_Batting values('Test', 52, 88, 9, 3677, 212, 6534);
-SQL> insert into RohitSharma_Batting values('ODI', 256, 248, 36, 10423, 264, 11403);
-SQL> insert into RohitSharma_Batting values('T20I', 148, 140, 15, 3853, 118, 2767);
-SQL> insert into RohitSharma_Batting values('IPL', 243, 238, 28, 6211, 109, 4776);
-
-
-# Rohit Sharma Bowling Career
-SQL> create table RohitSharma_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into RohitSharma_Bowling values('Test', 52, 16, 383, 224, 2, '1/26', '1/35');
-SQL> insert into RohitSharma_Bowling values('ODI', 256, 38, 593, 515, 8, '2/27', '2/27');
-SQL> insert into RohitSharma_Bowling values('T20I', 148, 9, 68, 113, 1, '1/22', '1/22');
-SQL> insert into RohitSharma_Bowling values('IPL', 243, 32, 339, 453, 15, '4/6', '4/6');
-
-# Virat Kohli Batting Career
-SQL> create table ViratKohli_Batting
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into ViratKohli_Batting values('Test', 111, 187, 11, 8676, 254, 15708);
-SQL> insert into ViratKohli_Batting values('ODI', 286, 274, 43, 23437, 183, 14341);
-SQL> insert into ViratKohli_Batting values('T20I', 115, 107, 31, 4008, 122, 2905);
-SQL> insert into ViratKohli_Batting values('IPL', 237, 229, 34, 7263, 113, 5586);
-
-# Virat Kohli Bowling Career
-SQL> create table ViratKohli_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into ViratKohli_Bowling values('Test', 111, 11, 175, 84, 0, '0/0', '0/0');
-SQL> insert into ViratKohli_Bowling values('ODI', 286, 49, 644, 667, 4, '1/15', '1/15');
-SQL> insert into ViratKohli_Bowling values('T20I', 115, 13, 152, 204, 4, '1/13', '1/13');
-SQL> insert into ViratKohli_Bowling values('IPL', 237, 26, 251, 368, 4, '2/25', '2/25');
-
-# Surya Kuamr Yadav Batting Career
-SQL> create table SuryakumarYadav_Batting
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into SuryakumarYadav_Batting values('Test', 1, 1, 0, 8, 8, 20);
-SQL> insert into SuryakumarYadav_Batting values('ODI', 31, 29, 4, 669, 72, 635);
-SQL> insert into SuryakumarYadav_Batting values('T20I', 53, 50, 10, 1841, 117, 1066);
-SQL> insert into SuryakumarYadav_Batting values('IPL', 139, 124, 22, 3249, 103, 2267);
-
-# Surya Kuamr Yadav Bowling Career
-SQL> create table SuryakumarYadav_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into SuryakumarYadav_Bowling (Format, No_of_Matches) values('Test', 1);
-SQL> insert into SuryakumarYadav_Bowling (Format, No_of_Matches) values('ODI', 31);
-SQL> insert into SuryakumarYadav_Bowling (Format, No_of_Matches) values('T20I', 53);
-SQL> insert into SuryakumarYadav_Bowling values('IPL', 139, 1, 6, 8, 0, '0/8', '0/8');
-
-# Shubman Gill Batting Career
-SQL> create table ShubmanGill_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into ShubmanGill_Batting values('Test', 18, 133, 3, 966, 128, 1638);
-SQL> insert into ShubmanGill_Batting values('ODI', 38, 38, 4, 2012, 208, 1961);
-SQL> insert into ShubmanGill_Batting values('T20I', 11, 11, 1, 304, 126, 207);
-SQL> insert into ShubmanGill_Batting values('IPL', 91, 88, 14, 2790, 129, 2081);
-
-# Shubman Gill Bowling Career
-SQL> create table ShubmanGill_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into ShubmanGill_Bowling values('Test', 18, 1, 7, 1, 0, '0/1', '0/1');
-SQL> insert into ShubmanGill_Bowling (Format, No_of_Matches) values('ODI', 38);
-SQL> insert into ShubmanGill_Bowling (Format, No_of_Matches) values('T20I', 11);
-SQL> insert into ShubmanGill_Bowling (Format, No_of_Matches)  values('IPL', 91);
-
-# Shreyas Iyer Batting Career
-SQL> create table ShreyasIyer_Batting
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into ShreyasIyer_Batting values('Test', 10, 16, 1, 666, 105, 1012);
-SQL> insert into ShreyasIyer_Batting values('ODI', 52, 47, 5, 1931, 113, 1982);
-SQL> insert into ShreyasIyer_Batting values('T20I', 49, 45, 11, 1043, 74, 767);
-SQL> insert into ShreyasIyer_Batting values('IPL', 101, 101, 13, 2776, 96, 2214);
-
-# Shreyas Iyer Bowling Career
-SQL> create table ShreyasIyer_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into ShreyasIyer_Bowling values('Test', 10, 1, 6, 2, 0, '0/2', '0/2');
-SQL> insert into ShreyasIyer_Bowling values('ODI', 52, 5, 37, 39, 0, '0/1', '0/1');
-SQL> insert into ShreyasIyer_Bowling values('T20I', 49, 1, 2, 2, 0, '0/2', '0/2');
-SQL> insert into ShreyasIyer_Bowling values('IPL', 101, 1, 6, 7, 0, '0/7', '0/7');
-
-# Hardik Pandya Batting Career
-SQL> create table HardikPandya_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into HardikPandya_Batting values('Test', 11, 18, 1, 532, 108, 720);
-SQL> insert into HardikPandya_Batting values('ODI', 86, 61, 9, 1769, 92, 1603);
-SQL> insert into HardikPandya_Batting values('T20I', 92, 71, 18, 1348, 71, 964);
-SQL> insert into HardikPandya_Batting values('IPL', 123, 115, 39, 2309, 91, 1583);
-
-# Hardik Pandya Bowling Career
-SQL> create table HardikPandya_Bowling 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into HardikPandya_Bowling values('Test', 11, 19, 937, 528, 17, '5/28', '6/50');
-SQL> insert into HardikPandya_Bowling values('ODI', 86, 80, 3199, 2960, 84, '4/24', '4/24');
-SQL> insert into HardikPandya_Bowling values('T20I', 92, 81, 1433, 1950, 73, '4/16', '4/16');
-SQL> insert into HardikPandya_Bowling values('IPL', 123, 81, 1202, 1763, 53, '3/17', '3/17');
-
-# Ravindra Jadeja Batting Career
-SQL> create table RavindraJadeja_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into RavindraJadeja_Batting values('Test', 67, 98, 21, 2804, 175, 4915);
-SQL> insert into RavindraJadeja_Batting values('ODI', 191, 128, 46, 2675, 87, 3166);
-SQL> insert into RavindraJadeja_Batting values('T20I', 64, 34, 15, 457, 46, 367);
-SQL> insert into RavindraJadeja_Batting values('IPL', 226, 173, 71, 2692, 62, 2093);
-
-# Ravindra Jadeja Bowling Career
-SQL> create table RavindraJadeja_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-# Changing BBM datatype size.
-SQL> Alter table RavindraJadeja_Bowling modify BBM varchar(6);
-
-SQL> insert into RavindraJadeja_Bowling values('Test', 67, 128, 16354, 6620, 275, '7/42', '10/110');
-SQL> insert into RavindraJadeja_Bowling values('ODI', 191, 183, 9476, 7728, 211, '5/36', '5/36');
-SQL> insert into RavindraJadeja_Bowling values('T20I', 64, 62, 1237, 1453, 51, '3/15', '3/15');
-SQL> insert into RavindraJadeja_Bowling values('IPL', 226, 197, 3547, 4495, 152, '5/16', '5/16');
-
-# Ravichandran Ashwin Batting Career
-SQL> create table RavichandranAshwin_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into RavichandranAshwin_Batting values('Test', 94, 132, 15, 3185, 124, 5832);
-SQL> insert into RavichandranAshwin_Batting values('ODI', 116, 63, 20, 707, 65, 813);
-SQL> insert into RavichandranAshwin_Batting values('T20I', 65, 19, 12, 184, 31, 160);
-SQL> insert into RavichandranAshwin_Batting values('IPL', 197, 85, 31, 714, 50, 601);
-
-# Ravichandran Ashwin Bowling Career
-SQL> create table RavichandranAshwin_Bowling 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-# Changing BBM datatype size.
-SQL> Alter table RavichandranAshwin_Bowling modify BBM varchar(6);
-
-SQL> insert into RavichandranAshwin_Bowling values('Test', 94, 178, 25113, 11569, 489, '7/59', '13/140');
-SQL> insert into RavichandranAshwin_Bowling values('ODI', 116, 114, 6303, 5180, 156, '4/25', '4/25');
-SQL> insert into RavichandranAshwin_Bowling values('T20I', 65, 65, 1452, 1672, 72, '4/8', '4/8');
-SQL> insert into RavichandranAshwin_Bowling values('IPL', 197, 194, 4194, 4902, 171, '4/34', '4/34');
-
-# KL Rahul Batting Career
-SQL> create table KLRahul_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into KLRahul_Batting values('Test', 47, 81, 2, 2642, 199, 5116);
-SQL> insert into KLRahul_Batting values('ODI', 67, 63, 13, 2507, 112, 2885);
-SQL> insert into KLRahul_Batting values('T20I', 72, 68, 8, 2265, 110, 1628);
-SQL> insert into KLRahul_Batting values('IPL', 118, 109, 20, 4163, 132, 3097);
-
-# KL Rahul Bowling Career
-SQL> create table KLRahul_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into KLRahul_Bowling (Format, No_of_Matches) values('Test', 47);
-SQL> insert into KLRahul_Bowling (Format, No_of_Matches) values('ODI', 67);
-SQL> insert into KLRahul_Bowling (Format, No_of_Matches) values('T20I', 72);
-SQL> insert into KLRahul_Bowling (Format, No_of_Matches) values('IPL', 197);
-
-# Ishan Kishan Batting Career
-SQL> create table IshanKishan_Batting
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into IshanKishan_Batting values('Test', 2, 3, 2, 78, 52, 91);
-SQL> insert into IshanKishan_Batting values('ODI', 27, 24, 2, 933, 210, 913);
-SQL> insert into IshanKishan_Batting values('T20I', 29, 29, 1, 686, 89, 564);
-SQL> insert into IshanKishan_Batting values('IPL', 91, 85, 6, 2324, 99, 1731);
-
-# Ishan Kishan Bowling Career
-SQL> create table IshanKishan_Bowling
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into IshanKishan_Bowling (Format, No_of_Matches) values('Test', 2);
-SQL> insert into IshanKishan_Bowling (Format, No_of_Matches) values('ODI', 27);
-SQL> insert into IshanKishan_Bowling (Format, No_of_Matches) values('T20I', 29);
-SQL> insert into IshanKishan_Bowling (Format, No_of_Matches) values('IPL', 91);
-
-# Jasprit Bumrah Batting Career
-SQL> create table JaspritBumrah_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into JaspritBumrah_Batting values('Test', 30, 46, 17, 212, 34, 455);
-SQL> insert into JaspritBumrah_Batting values('ODI', 84, 24, 13, 89, 16, 155);
-SQL> insert into JaspritBumrah_Batting values('T20I', 62, 7, 5, 8, 7, 13);
-SQL> insert into JaspritBumrah_Batting values('IPL', 120, 26, 19, 56, 16, 66);
-
-# Jasprit Bumrah Bowling Career
-SQL> create table JaspritBumrah_Bowling 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into JaspritBumrah_Bowling values('Test', 30, 58, 6268, 2815, 128, '6/27', '9/86');
-SQL> insert into JaspritBumrah_Bowling values('ODI', 84, 83, 4329, 3326, 142, '6/19', '6/19');
-SQL> insert into JaspritBumrah_Bowling values('T20I', 62, 61, 1331, 1455, 74, '3/11', '3/11');
-SQL> insert into JaspritBumrah_Bowling values('IPL', 120, 120, 2742, 3380, 145, '5/10', '5/10');
-
-# Shardul Thakur Batting Career
-SQL> create table ShardulThakur_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into ShardulThakur_Batting values('Test', 10, 16, 1, 305, 67, 481);
-SQL> insert into ShardulThakur_Batting values('ODI', 47, 25, 6, 329, 50, 313);
-SQL> insert into ShardulThakur_Batting values('T20I', 25, 6, 3, 69, 22, 38);
-SQL> insert into ShardulThakur_Batting values('IPL', 86, 34, 10, 286, 68, 204);
-
-# Shardul Thakur Bowling Career
-SQL> create table ShardulThakur_Bowling 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into ShardulThakur_Bowling values('Test', 10, 18, 1335, 779, 30, '7/61', '8/108');
-SQL> insert into ShardulThakur_Bowling values('ODI', 47, 46, 1940, 2014, 65, '4/37', '4/37');
-SQL> insert into ShardulThakur_Bowling values('T20I', 25, 24, 506, 772, 33, '4/27', '4/27');
-SQL> insert into ShardulThakur_Bowling values('IPL', 86, 83, 1676, 2560, 89, '4/36', '4/36');
-
-# Mohammed Shami Batting Career
-SQL> create table MohammedShami_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into MohammedShami_Batting values('Test', 64, 89, 26, 750, 56, 1005);
-SQL> insert into MohammedShami_Batting values('ODI', 96, 46, 20, 212, 25, 251);
-SQL> insert into MohammedShami_Batting values('T20I', 23, 3, 2, 0, 0, 2);
-SQL> insert into MohammedShami_Batting values('IPL', 110, 25, 12, 74, 21, 79);
-
-
-# Mohammed Shami Bowling Career
-SQL> create table MohammedShami_Bowling 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into MohammedShami_Bowling values('Test', 64, 122, 11515, 6346, 229, '6/56', '9/118');
-SQL> insert into MohammedShami_Bowling values('ODI', 96, 95, 4789, 4431, 179, '5/51', '5/51');
-SQL> insert into MohammedShami_Bowling values('T20I', 23, 23, 477, 711, 24, '3/15', '3/15');
-SQL> insert into MohammedShami_Bowling values('IPL', 110, 110, 2426, 3411, 127, '4/11', '4/11');
-
-# Mohammed Siraj Batting Career
-SQL> create table MohammedSiraj_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into MohammedSiraj_Batting values('Test', 21, 28, 11, 80, 16, 190);
-SQL> insert into MohammedSiraj_Batting values('ODI', 35, 13, 7, 37, 9, 92);
-SQL> insert into MohammedSiraj_Batting values('T20I', 8, 1, 0, 5, 5, 7);
-SQL> insert into MohammedSiraj_Batting values('IPL', 79, 22, 14, 97, 14, 111);
-
-# Mohammed Siraj Bowling Career
-SQL> create table MohammedSiraj_Bowling 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-
-SQL> insert into MohammedSiraj_Bowling values('Test', 21, 39, 3275, 1784, 59, '5/60', '8/126');
-SQL> insert into MohammedSiraj_Bowling values('ODI', 35, 34, 1591, 1339, 60, '6/21', '6/21');
-SQL> insert into MohammedSiraj_Bowling values('T20I', 8, 8, 192, 294, 11, '4/17', '4/17');
-SQL> insert into MohammedSiraj_Bowling values('IPL', 79, 79, 1634, 2326, 78, '4/21', '4/21');
-
-# Kuldeep Yadav Batting Career
-SQL> create table KuldeepYadav_Batting 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Not_Out Number(2),
-Runs Number(5),
-Highest_Score Number(3),
-Ball_Faced Number(5)
-);
-
-SQL> insert into KuldeepYadav_Batting values('Test', 8, 9, 0, 94, 40, 299);
-SQL> insert into KuldeepYadav_Batting values('ODI', 96, 35, 18, 179, 19, 315);
-SQL> insert into KuldeepYadav_Batting values('T20I', 32, 7, 3, 46, 23, 59);
-SQL> insert into KuldeepYadav_Batting values('IPL', 73, 28, 19, 136, 16, 175);
-
-# Kuldeep Yadav Bowling Career
-SQL> create table KuldeepYadav_Bowling 
-(
-Format varchar(5),
-No_of_Matches Number(3),
-No_of_Innings Number(3),
-Balls Number(5),
-Runs Number(5),
-Wickets Number(3),
-BBI varchar(5),
-BBM varchar(5)
-);
-SQL> insert into KuldeepYadav_Bowling values('Test', 8, 14, 1279, 733, 34, '5/40', '8/113');
-SQL> insert into KuldeepYadav_Bowling values('ODI', 93, 93, 4903, 4156, 162, '6/25', '6/25');
-SQL> insert into KuldeepYadav_Bowling values('T20I', 32, 31, 687, 758, 52, '5/24', '5/24');
-SQL> insert into KuldeepYadav_Bowling values('IPL', 73, 71, 1488, 2016, 71, '4/14', '4/14');
-SQL>Commit;
-
-# Updating date 
-SQL> update RohitSharma_Batting set No_of_Matches=257, No_of_Innings=249, Runs=10510, Ball_Faced=11504 where Format='ODI';
-SQL> update RohitSharma_Bowling set No_of_Matches=257 where Format='ODI';
-SQL> update ShubmanGill_Batting set No_of_Matches=39, No_of_Innings=39, Runs=2021, Ball_Faced=1974 where Format='ODI';
-SQL> update ShubmanGill_Bowling set No_of_Matches=39 where Format='ODI';
-SQL> update ViratKohli_Batting set No_of_Matches=287, No_of_Innings=275, Runs=13437, Ball_Faced=14350 where Format='ODI';
-SQL> update ViratKohli_Bowling set No_of_Matches=287 where Format='ODI';
-SQL> update ShreyasIyer_Batting set No_of_Matches=53, No_of_Innings=48, Runs=1935, Ball_Faced=1998 where Format='ODI';
-SQL> update ShreyasIyer_Bowling set No_of_Matches=53 where Format='ODI';
-SQL> update KLRahul_Batting set No_of_Matches=67, No_of_Innings=63, Runs=2507, Ball_Faced=2885 where Format='ODI';
-SQL> update KLRahul_Bowling set No_of_Matches=67 where Format='ODI';
-SQL> update SuryakumarYadav_Batting set No_of_Matches=32, No_of_Innings=30, Runs=718, Ball_Faced=682 where Format='ODI';
-SQL> update SuryakumarYadav_Bowling set No_of_Matches=32 where Format='ODI';
-SQL> update RavindraJadeja_Batting set No_of_Matches=192, No_of_Innings=129, Runs=2683, Ball_Faced=3179 where Format='ODI';
-SQL> update RavindraJadeja_Bowling set No_of_Matches=192, No_of_Innings=184, Balls=9518, Runs=7744, Wickets=212 where Format='ODI';
-SQL> update MohammedShami_Batting set No_of_Matches=96, No_of_Innings=46, Runs=212, Ball_Faced=251 where Format='ODI';
-SQL> update MohammedShami_Bowling set No_of_Matches=96, No_of_Innings=95, Balls=4794, Runs=4437, Wickets=180 where Format='ODI';
-SQL> update JaspritBumrah_Batting set No_of_Matches=84, No_of_Innings=24, Runs=89, Ball_Faced=155 where Format='ODI';
-SQL> update JaspritBumrah_Bowling set No_of_Matches=84, No_of_Innings=83, Balls=4352, Runs=3347, Wickets=143 where Format='ODI';
-SQL> update KuldeepYadav_Batting set No_of_Matches=96, No_of_Innings=35, Runs=179, Ball_Faced=315 where Format='ODI';
-SQL> update KuldeepYadav_Bowling set No_of_Matches=96, No_of_Innings=93, Balls=4903, Runs=4156, Wickets=162 where Format='ODI';
-SQL> update MohammedSiraj_Batting set No_of_Matches=36 where Format='ODI';
-SQL> update MohammedSiraj_Bowling set No_of_Matches=36, No_of_Innings=35, Balls=1627, Runs=1372 where Format='ODI';
-SQL>Commit;
-
-# Batting average of Batters
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from RohitSharma_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from ShubmanGill_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from ViratKohil_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from ShreyasIyer_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from KLRahul_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from SuryakumarYadav_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from RavindraJadeja_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from IshanKishan_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from HardikPandya_Batting;
-SQL> select (Runs/(No_of_Innings-Not_Out)) as Batting_Average from RavichandranAshwin_Batting;
-
-# Batting Strike Rate of Batters
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from RohitSharma_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from ShubmanGill_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from ViratKohil_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from ShreyasIyer_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from KLRahul_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from SuryakumarYadav_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from RavindraJadeja_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from HardikPandya_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from IshanKishan_Batting;
-SQL> select ((Runs/Ball_Faced)*100) as Strike_Rate from RavichandranAshwin_Batting;
-
-# Bowling average of Bowler.
-SQL> select (Runs/Wickets) as Bowling_Average from JaspritBumrah_Bowling;
-SQL> select (Runs/Wickets) as Bowling_Average from MohammedShami_Bowling;
-SQL> select (Runs/Wickets) as Bowling_Average from MohammedSiraj_Bowling;
-SQL> select (Runs/Wickets) as Bowling_Average from KuldeepYadav_Bowling;
-SQL> select (Runs/Wickets) as Bowling_Average from RavindraJadeja_Bowling;
-SQL> select (Runs/Wickets) as Bowling_Average from RavichandranAshwin_Bowling;
-SQL> select (Runs/Wickets) as Bowling_Average from HardikPandya_Bowling;
-SQL> select (Runs/Wickets) as Bowling_Average from ShardulThakur_Bowling;
-
-# Bowling Economic of Bowler.
-SQL> select (Runs/(Balls/6)) as Bowling_Average from JaspritBumrah_Bowling;
-SQL> select (Runs/(Balls/6)) as Bowling_Average from MohammedShami_Bowling;
-SQL> select (Runs/(Balls/6)) as Bowling_Average from MohammedSiraj_Bowling;
-SQL> select (Runs/(Balls/6)) as Bowling_Average from KuldeepYadav_Bowling;
-SQL> select (Runs/(Balls/6)) as Bowling_Average from RavindraJadeja_Bowling;
-SQL> select (Runs/(Balls/6)) as Bowling_Average from RavichandranAshwin_Bowling;
-SQL> select (Runs/(Balls/6)) as Bowling_Average from HardikPandya_Bowling;
-SQL> select (Runs/(Balls/6)) as Bowling_Average from ShardulThakur_Bowling;
-
-#Total Runs of Batter.
-SQL> select sum(Runs) as Total_Runs from RohitSharma_Batting;
-SQL> select sum(Runs) as Total_Runs from ShubmanGill_Batting;
-SQL> select sum(Runs) as Total_Runs from ViratKohil_Batting;
+#Inidain Cricket Players
+
+SQL> CREATE TABLE Indian_Squad_WC_2023 (Name_of_the_Player varchar (30), No_of_Test Number (3), No_of_ODI Number (3), No_of_T20I Number (3), No_of_IPL Number (3));
+SQL> DESC Indian_Squad_WC_2023;
+SQL>INSERT INTO Indian_Squad_WC_2023 (Name_of_the_Player, No_of_Test, No_of_ODI, No_of_T20I, No_of_IPL) VALUES ('Mohammed Siraj', 21, 36, 8, 79);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Rohit Sharma (C)’, 52, 256, 148, 243);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Shubman Gill', 18, 39, 11, 91);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Virat Kohli', 111, 287, 115, 237);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Ishan Kishan', 2, 27, 29, 91);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('KL Rahul', 47, 67, 72, 118);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Suryakumar Yadav', 1, 32, 53, 139);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Hardik Pandya(VC)', 11, 86, 92, 123);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Ravindra Jadeja', 67, 192, 64, 226);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Mohammed Shami', 64, 96, 23, 110);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Jasprit Bumrah', 30, 84, 62, 120);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Kuldeep Yadav', 8, 96, 32, 73);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Shreyas Iyer', 10, 53, 49, 101);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Ravichandran Ashwin', 94, 116, 65, 197);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Shardul Thakur', 10, 47, 25, 86);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Mohammed Siraj', 21, 36, 8, 79);
+
+# Adding Columns to the TABLE.
+
+SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Test_Runs Number(5), ODI_Runs Number(5), T20I_Runs Number(5), IPL_Runs Number(5), Test_Wickets Number(3), ODI_Wickets Number(3), T20I_Wickets Number(3), IPL_Wickets Number(3);
+
+# Setting Page and Line size of the table.
+SQL> SET LINESIZE 250;
+SQL> SET PAGESIZE 100;
+
+# Updating data to the TABLE.
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=3677, ODI_Runs=10510, T20I_Runs=3853, IPL_Runs=6211, Test_Wickets=2, ODI_Wickets=8, T20I_Wickets=1, IPL_Wickets=15 WHERE Name_of_the_Player='Rohit Sharma (C)';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=966, ODI_Runs=2021, T20I_Runs=304, IPL_Runs=2790 WHERE Name_of_the_Player='Shubman Gill';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=8676, ODI_Runs=13437, T20I_Runs=4008, IPL_Runs=7263, ODI_Wickets=4, T20I_Wickets=4, IPL_Wickets=4 WHERE Name_of_the_Player='Virat Kohli';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=666, ODI_Runs=1935, T20I_Runs=1043, IPL_Runs=2776 WHERE Name_of_the_Player='Shreyas Iyer';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=8, ODI_Runs=718, T20I_Runs=1841, IPL_Runs=3249 WHERE Name_of_the_Player='Suryakumar Yadav';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=532, ODI_Runs=1769, T20I_Runs=1348, IPL_Runs=2309, Test_Wickets=17, ODI_Wickets=84, T20I_Wickets=73, IPL_Wickets=53 WHERE Name_of_the_Player='Hardik Pandya (VC)';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=2804, ODI_Runs=2683, T20I_Runs=457, IPL_Runs=2692, Test_Wickets=275, ODI_Wickets=212, T20I_Wickets=51, IPL_Wickets=152 WHERE Name_of_the_Player='Ravindra Jadeja';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=3185, ODI_Runs=707, T20I_Runs=184, IPL_Runs=714, Test_Wickets=489, ODI_Wickets=156, T20I_Wickets=72, IPL_Wickets=171 WHERE Name_of_the_Player='Ravichandran Ashwin';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=2642, ODI_Runs=2507, T20I_Runs=2265, IPL_Runs=4163 WHERE Name_of_the_Player='KL Rahul';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=78, ODI_Runs=933, T20I_Runs=686, IPL_Runs=2324 WHERE Name_of_the_Player='Ishan Kishan';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=305, ODI_Runs=329, T20I_Runs=69, IPL_Runs=286, Test_Wickets=30, ODI_Wickets=65, T20I_Wickets=33, IPL_Wickets=89 WHERE Name_of_the_Player='Shardul Thakur';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=212, ODI_Runs=89, T20I_Runs=8, IPL_Runs=56, Test_Wickets=128, ODI_Wickets=143, T20I_Wickets=74, IPL_Wickets=145 WHERE Name_of_the_Player='Jasprit Bumrah';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=94, ODI_Runs=179, T20I_Runs=46, IPL_Runs=136, Test_Wickets=34, ODI_Wickets=162, T20I_Wickets=52, IPL_Wickets=71 WHERE Name_of_the_Player='Kuldeep Yadav';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=750, ODI_Runs=212, T20I_Runs=0, IPL_Runs=74, Test_Wickets=229, ODI_Wickets=180, T20I_Wickets=24, IPL_Wickets=127 WHERE Name_of_the_Player='Mohammed Shami';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=80, ODI_Runs=37, T20I_Runs=5, IPL_Runs=97, Test_Wickets=59, ODI_Wickets=60, T20I_Wickets=11, IPL_Wickets=78 WHERE Name_of_the_Player='Mohammed Siraj';
+
+# Total International Runs of Batter.
+SQL> select (Test_Runs+ ODI_Runs+ T20I_Runs) as International_Runs from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Rohit Sharma';
+SQL> select (Test_Runs+ ODI_Runs+ T20I_Runs) as International_Runs from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Shubman Gill';
+SQL> select (Test_Runs+ ODI_Runs+ T20I_Runs) as International_Runs from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Virat Kohli';
 
 # Total International Wickets of Bowler.
-SQL> select sum(Wickets) as International_Wickets from KuldeepYadav_Bowling where format IN ('ODI', 'Test', 'T20I');
-SQL> select sum(Wickets) as International_Wickets from RavichandranAshwin_Bowling where format IN ('ODI', 'Test', 'T20I');
-SQL> select sum(Wickets) as International_Wickets from HardikPandya_Bowling where format IN ('ODI', 'Test', 'T20I');
+SQL> select (Test_Wickets+ ODI_Wickets + T20I_Wickets) as International_Wickets from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Jasprit Bumrah';
+SQL> select (Test_Wickets+ ODI_Wickets + T20I_Wickets) as International_Wickets from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Mohammed Shami';
+SQL> select (Test_Wickets+ ODI_Wickets + T20I_Wickets) as International_Wickets from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Hardik Pandya';
+
+# Adding Columns(Role and Jersey Number) to the TABLE.
+
+SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Role varchar(18), Jersey_No Number(3));
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batter', Jersey_No=45 WHERE Name_of_the_Player='Rohit Sharma'; 
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batter', Jersey_No=18 WHERE Name_of_the_Player='Virat Kohli';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batter', Jersey_No=69 WHERE Name_of_the_Player='Suryakumar Yadav';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batter', Jersey_No=77 WHERE Name_of_the_Player='Shubman Gill';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batter', Jersey_No=96 WHERE Name_of_the_Player='Shreyas Iyer';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batting Allrounder', Jersey_No=33 WHERE Name_of_the_Player='Hardik Pandya';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowling Allrounder', Jersey_No=8 WHERE Name_of_the_Player='Ravindra Jadeja';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowling Allrounder', Jersey_No=99 WHERE Name_of_the_Player='Ravichandran Ashwin';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='WK-Batter', Jersey_No=1 WHERE Name_of_the_Player='KL Rahul';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='WK-Batter', Jersey_No=32 WHERE Name_of_the_Player='Ishan Kishan';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowler', Jersey_No=93 WHERE Name_of_the_Player='Jasprit Burmah';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowler', Jersey_No=54 WHERE Name_of_the_Player='Shardul Thakur';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowler', Jersey_No=11 WHERE Name_of_the_Player='Mohammed Shami';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowler', Jersey_No=13 WHERE Name_of_the_Player='Mohammed Siraj';
+SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowler', Jersey_No=23 WHERE Name_of_the_Player='Kuldeep Yadav';
+
+# Deleting Jersey Number and Role Columns.
+SQL> ALTER TABLE Indian_Squad_WC_2023 DROP COLUMN Jersey_No;
+SQL> ALTER TABLE Indian_Squad_WC_2023 DROP COLUMN Role;
+
+#Creating Separate Table for Role and Jersey Number.
+
+#Indian Squad For ICC World Cup 2023.
+SQL> CREATE table Indian_Squad_WC2023 (Name_of_the_Player varchar(30), Jersey_No Number(3), Role Varchar(18));
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Rohit Sharma', 45, 'Batter' );
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Virat Kohli', 18, 'Batter' );
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Suryakumar Yadav', 69, 'Batter' );
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shubman Gill', 77, 'Batter' );
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shreyas Iyer', 96, 'Batter' );
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Hardik Pandya', 33, 'Batting Allrounder' );
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Ravindra Jadeja', 8, 'Bowling Allrounder' );
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Ravichandran Ashwin', 99, 'Bowling Allrounder');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('KL Rahul', 1, 'WK-Batter');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Ishan Kishan', 32, 'WK-Batter');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Jasprit Bumrah', 93, 'Bowler');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shardul Thakur', 54, 'Bowler');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Mohammed Shami', 11, 'Bowler');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Mohammed Siraj', 13, 'Bowler');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Kuldeep Yadav', 23, 'Bowler');
+SQL> update Indian_Squad_WC2023 set Name_of_The_Player='Rohit Sharma (C)' where Jersey_No=45;
+SQL> update Indian_Squad_WC2023 set Name_of_The_Player='Hardik Pandya (VC)' where Jersey_No=33;
+SQL>Commit;
+
+#Joining Two Tables.
+SQL>SELECT Indian_Squad_WC_2023.Name_of_The_Player, Indian_Squad_WC2023.Jersey_No, Indian_Squad_WC2023.Role, (Indian_Squad_WC_2023.No_of_Test + Indian_Squad_WC_2023.No_of_ODI + Indian_Squad_WC_2023.No_of_T20I) AS Total_Matches FROM Indian_Squad_WC_2023 FULL JOIN Indian_Squad_WC2023 on Indian_Squad_WC_2023.Name_of_The_Player = Indian_Squad_WC2023.Name_of_The_Player;
+
+#Total Number of matches and Total Runs.
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Runs+ODI_Runs+T20I_Runs) AS Total_Runs FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Rohit Sharma (C)’;
+
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Runs+ODI_Runs+T20I_Runs) AS Total_Runs FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Virat Kohli’;
+
+#Total Number of matches and Total Wickets.
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Wickets+ODI_Wickets +T20I_Wickets) AS Total_Wickets FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Jasprit Bumrah’;
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Wickets+ODI_Wickets +T20I_Wickets) AS Total_Wickets FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Mohammed Shami’;
 

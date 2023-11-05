@@ -1,4 +1,4 @@
-#Inidain Cricket Players
+# Inidain Cricket Players
 
 SQL> CREATE TABLE Indian_Squad_WC_2023 (Name_of_the_Player varchar (30), No_of_Test Number (3), No_of_ODI Number (3), No_of_T20I Number (3), No_of_IPL Number (3));
 SQL> DESC Indian_Squad_WC_2023;
@@ -9,7 +9,7 @@ SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Virat Kohli', 111, 287, 115, 237)
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Ishan Kishan', 2, 27, 29, 91);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('KL Rahul', 47, 67, 72, 118);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Suryakumar Yadav', 1, 32, 53, 139);
-SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Hardik Pandya(VC)', 11, 86, 92, 123);
+SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Hardik Pandya (VC)', 11, 86, 92, 123);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Ravindra Jadeja', 67, 192, 64, 226);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Mohammed Shami', 64, 96, 23, 110);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Jasprit Bumrah', 30, 84, 62, 120);
@@ -21,9 +21,9 @@ SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Mohammed Siraj', 21, 36, 8, 79);
 
 # Adding Columns to the TABLE.
 
-SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Test_Runs Number(5), ODI_Runs Number(5), T20I_Runs Number(5), IPL_Runs Number(5), Test_Wickets Number(3), ODI_Wickets Number(3), T20I_Wickets Number(3), IPL_Wickets Number(3);
+SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Test_Runs Number (5), ODI_Runs Number (5), T20I_Runs Number (5), IPL_Runs Number (5), Test_Wickets Number (3), ODI_Wickets Number (3), T20I_Wickets Number (3), IPL_Wickets Number (3);
 
-# Setting Page and Line size of the table.
+# SETting Page and Line size of the table.
 SQL> SET LINESIZE 250;
 SQL> SET PAGESIZE 100;
 
@@ -39,7 +39,7 @@ SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=3185, ODI_Runs=707, T20I_Runs=184
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=2642, ODI_Runs=2507, T20I_Runs=2265, IPL_Runs=4163 WHERE Name_of_the_Player='KL Rahul';
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=78, ODI_Runs=933, T20I_Runs=686, IPL_Runs=2324 WHERE Name_of_the_Player='Ishan Kishan';
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=305, ODI_Runs=329, T20I_Runs=69, IPL_Runs=286, Test_Wickets=30, ODI_Wickets=65, T20I_Wickets=33, IPL_Wickets=89 WHERE Name_of_the_Player='Shardul Thakur';
-SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=212, ODI_Runs=89, T20I_Runs=8, IPL_Runs=56, Test_Wickets=128, ODI_Wickets=143, T20I_Wickets=74, IPL_Wickets=145 WHERE Name_of_the_Player='Jasprit Bumrah';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=212, ODI_Runs=89, T20I_Runs=8, IPL_Runs=56, Test_Wickets=128, ODI_Wickets=144, T20I_Wickets=74, IPL_Wickets=145 WHERE Name_of_the_Player='Jasprit Bumrah';
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=94, ODI_Runs=179, T20I_Runs=46, IPL_Runs=136, Test_Wickets=34, ODI_Wickets=162, T20I_Wickets=52, IPL_Wickets=71 WHERE Name_of_the_Player='Kuldeep Yadav';
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=750, ODI_Runs=212, T20I_Runs=0, IPL_Runs=74, Test_Wickets=229, ODI_Wickets=180, T20I_Wickets=24, IPL_Wickets=127 WHERE Name_of_the_Player='Mohammed Shami';
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Runs=80, ODI_Runs=37, T20I_Runs=5, IPL_Runs=97, Test_Wickets=59, ODI_Wickets=60, T20I_Wickets=11, IPL_Wickets=78 WHERE Name_of_the_Player='Mohammed Siraj';
@@ -54,9 +54,9 @@ SQL> select (Test_Wickets+ ODI_Wickets + T20I_Wickets) as International_Wickets 
 SQL> select (Test_Wickets+ ODI_Wickets + T20I_Wickets) as International_Wickets from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Mohammed Shami';
 SQL> select (Test_Wickets+ ODI_Wickets + T20I_Wickets) as International_Wickets from Indian_Squad_WC_2023 WHERE Name_of_the_Player='Hardik Pandya';
 
-# Adding Columns(Role and Jersey Number) to the TABLE.
+# Adding Columns (Role and Jersey Number) to the TABLE.
 
-SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Role varchar(18), Jersey_No Number(3));
+SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Role varchar (18), Jersey_No Number (3));
 
 SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batter', Jersey_No=45 WHERE Name_of_the_Player='Rohit Sharma'; 
 SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Batter', Jersey_No=18 WHERE Name_of_the_Player='Virat Kohli';
@@ -78,17 +78,15 @@ SQL> UPDATE Indian_Squad_WC_2023 SET Role ='Bowler', Jersey_No=23 WHERE Name_of_
 SQL> ALTER TABLE Indian_Squad_WC_2023 DROP COLUMN Jersey_No;
 SQL> ALTER TABLE Indian_Squad_WC_2023 DROP COLUMN Role;
 
-#Creating Separate Table for Role and Jersey Number.
-
-#Indian Squad For ICC World Cup 2023.
-SQL> CREATE table Indian_Squad_WC2023 (Name_of_the_Player varchar(30), Jersey_No Number(3), Role Varchar(18));
-SQL> INSERT into Indian_Squad_WC2023 VALUES ('Rohit Sharma', 45, 'Batter' );
-SQL> INSERT into Indian_Squad_WC2023 VALUES ('Virat Kohli', 18, 'Batter' );
-SQL> INSERT into Indian_Squad_WC2023 VALUES ('Suryakumar Yadav', 69, 'Batter' );
-SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shubman Gill', 77, 'Batter' );
-SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shreyas Iyer', 96, 'Batter' );
-SQL> INSERT into Indian_Squad_WC2023 VALUES ('Hardik Pandya', 33, 'Batting Allrounder' );
-SQL> INSERT into Indian_Squad_WC2023 VALUES ('Ravindra Jadeja', 8, 'Bowling Allrounder' );
+# Creating Separate Table for Role and Jersey Number.
+SQL> CREATE table Indian_Squad_WC2023 (Name_of_the_Player varchar (30), Jersey_No Number (3), Role Varchar (18));
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Rohit Sharma', 45, 'Batter’);
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Virat Kohli', 18, 'Batter');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Suryakumar Yadav', 69, 'Batter’);
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shubman Gill', 77, 'Batter');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shreyas Iyer', 96, 'Batter');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Hardik Pandya', 33, 'Batting Allrounder');
+SQL> INSERT into Indian_Squad_WC2023 VALUES ('Ravindra Jadeja', 8, 'Bowling Allrounder');
 SQL> INSERT into Indian_Squad_WC2023 VALUES ('Ravichandran Ashwin', 99, 'Bowling Allrounder');
 SQL> INSERT into Indian_Squad_WC2023 VALUES ('KL Rahul', 1, 'WK-Batter');
 SQL> INSERT into Indian_Squad_WC2023 VALUES ('Ishan Kishan', 32, 'WK-Batter');
@@ -97,19 +95,79 @@ SQL> INSERT into Indian_Squad_WC2023 VALUES ('Shardul Thakur', 54, 'Bowler');
 SQL> INSERT into Indian_Squad_WC2023 VALUES ('Mohammed Shami', 11, 'Bowler');
 SQL> INSERT into Indian_Squad_WC2023 VALUES ('Mohammed Siraj', 13, 'Bowler');
 SQL> INSERT into Indian_Squad_WC2023 VALUES ('Kuldeep Yadav', 23, 'Bowler');
-SQL> update Indian_Squad_WC2023 set Name_of_The_Player='Rohit Sharma (C)' where Jersey_No=45;
-SQL> update Indian_Squad_WC2023 set Name_of_The_Player='Hardik Pandya (VC)' where Jersey_No=33;
+SQL> UPDATE Indian_Squad_WC2023 SET Name_of_The_Player='Rohit Sharma (C)' where Jersey_No=45;
+SQL> UPDATE Indian_Squad_WC2023 SET Name_of_The_Player='Hardik Pandya (VC)' where Jersey_No=33;
 SQL>Commit;
 
-#Joining Two Tables.
-SQL>SELECT Indian_Squad_WC_2023.Name_of_The_Player, Indian_Squad_WC2023.Jersey_No, Indian_Squad_WC2023.Role, (Indian_Squad_WC_2023.No_of_Test + Indian_Squad_WC_2023.No_of_ODI + Indian_Squad_WC_2023.No_of_T20I) AS Total_Matches FROM Indian_Squad_WC_2023 FULL JOIN Indian_Squad_WC2023 on Indian_Squad_WC_2023.Name_of_The_Player = Indian_Squad_WC2023.Name_of_The_Player;
+# Joining Two Tables.
+SQL>SELECT Indian_Squad_WC_2023.Name_of_The_Player, Indian_Squad_WC2023.Jersey_No, Indian_Squad_WC2023.Role, (Indian_Squad_WC_2023.No_of_Test + Indian_Squad_WC_2023.No_of_ODI + Indian_Squad_WC_2023.No_of_T20I) AS Total_Matches FROM Indian_Squad_WC_2023 FULL JOIN Indian_Squad_WC2023 ON Indian_Squad_WC_2023.Name_of_The_Player = Indian_Squad_WC2023.Name_of_The_Player;
 
-#Total Number of matches and Total Runs.
-SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Runs+ODI_Runs+T20I_Runs) AS Total_Runs FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Rohit Sharma (C)’;
+# Total Number of matches and Total Runs.
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Runs+ODI_Runs+T20I_Runs) AS Total_Runs FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Rohit Sharma (C)';
 
-SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Runs+ODI_Runs+T20I_Runs) AS Total_Runs FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Virat Kohli’;
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Runs+ODI_Runs+T20I_Runs) AS Total_Runs FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Virat Kohli';
 
-#Total Number of matches and Total Wickets.
-SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Wickets+ODI_Wickets +T20I_Wickets) AS Total_Wickets FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Jasprit Bumrah’;
-SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Wickets+ODI_Wickets +T20I_Wickets) AS Total_Wickets FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player=’Mohammed Shami’;
+# Total Number of matches and Total Wickets.
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Wickets+ODI_Wickets +T20I_Wickets) AS Total_Wickets FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Jasprit Bumrah';
+SQL>SELECT SUM (No_of_Test + No_of_ODI + No_of_T20I) AS Total_Matches, SUM (Test_Wickets+ODI_Wickets +T20I_Wickets) AS Total_Wickets FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Mohammed Shami';
+# Adding Columns for Number of Innings(Batting and Bowling of Test, ODI, T20I), Not Outs, No of ball faced in each format, No of balls bowled and Number of Runs Conceded in each format.
+SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Test_Bat_Innings Number (3), ODI_Bat_Innings Number (3), T20I_Bat_Innings Number (3), IPL_Bat_Innings Number (3), Test_Bow_Innings Number (3), ODI_Bow_Innings Number (3), T20I_Bow_Innings Number (3), IPL_Bow_Innings Number (3), Test_NotOut Number (3), ODI_NotOut Number (3), T20I_NotOut Number (3), IPL_NotOut Number (3), Test_Ballfaced Number (5), ODI_Ballfaced Number (5), T20I_Ballfaced Number (5), IPL_Ballfaced Number (5), Test_Bowls Number (5), ODI_Bowls Number (5), T20I_Bowls Number (5), IPL_Bowls Number (5), Test_RunsConceded Number (5), ODI_RunsConceded Number (5), T20I_RunsConceded Number (5), IPL_RunsConceded Number (5));
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=88, ODI_Bat_Innings=250, T20I_Bat_Innings=140, IPL_Bat_Innings=243, Test_Bow_Innings=16, ODI_Bow_Innings=38, T20I_Bow_Innings=9, IPL_Bow_Innings=32, Test_NotOut=9, ODI_NotOut=36, T20I_NotOut=15, IPL_NotOut=28, Test_Ballfaced=6534, ODI_Ballfaced=11506, T20I_Ballfaced=2767, IPL_Ballfaced=4776, Test_Bowls=383, ODI_Bowls=593, T20I_Bowls=68, IPL_Bowls=339, Test_RunsConceded=224, ODI_RunsConceded=515, T20I_RunsConceded=113, IPL_RunsConceded=453 WHERE Name_of_the_Player='Rohit Sharma (C)';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=33, ODI_Bat_Innings=40, T20I_Bat_Innings=11, IPL_Bat_Innings=91, Test_Bow_Innings=1, Test_NotOut=3, ODI_NotOut=6, T20I_NotOut=1, IPL_NotOut=14, Test_Ballfaced=1638, ODI_Ballfaced=2066, T20I_Ballfaced=207, IPL_Ballfaced=2081, Test_Bowls=7, Test_RunsConceded=1 WHERE Name_of_the_Player='Shubman Gill';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=111, ODI_Bat_Innings=288, T20I_Bat_Innings=115, IPL_Bat_Innings=237, Test_Bow_Innings=11, ODI_Bow_Innings=49, T20I_Bow_Innings=13, IPL_Bow_Innings=26, Test_NotOut=11, ODI_NotOut=43, T20I_NotOut=31, IPL_NotOut=34, Test_Ballfaced=15708, ODI_Ballfaced=14444, T20I_Ballfaced=2905, IPL_Ballfaced=5586, Test_Bowls=175, ODI_Bowls=644, T20I_Bowls=152, IPL_Bowls=251, Test_RunsConceded=84, ODI_RunsConceded=667, T20I_RunsConceded=204, IPL_RunsConceded=368 WHERE Name_of_the_Player='Virat Kohli';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=16, ODI_Bat_Innings=49, T20I_Bat_Innings=45, IPL_Bat_Innings=101, Test_Bow_Innings=1, ODI_Bow_Innings=5, T20I_Bow_Innings=1, IPL_Bow_Innings=1, Test_NotOut=1, ODI_NotOut=5, T20I_NotOut=11, IPL_NotOut=13, Test_Ballfaced=1012, ODI_Ballfaced=2054, T20I_Ballfaced=767, IPL_Ballfaced=2214, Test_Bowls=6, ODI_Bowls=37, T20I_Bowls=2, IPL_Bowls=7, Test_RunsConceded=2, ODI_RunsConceded=39, T20I_RunsConceded=2, IPL_RunsConceded=7 WHERE Name_of_the_Player='Shreyas Iyer';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=1, ODI_Bat_Innings=31, T20I_Bat_Innings=50, IPL_Bat_Innings=124, IPL_Bow_Innings=1, Test_NotOut=0, ODI_NotOut=4, T20I_NotOut=10, IPL_NotOut=22, Test_Ballfaced=20, ODI_Ballfaced=691, T20I_Ballfaced=1066, IPL_Ballfaced=2267, IPL_Bowls=6, IPL_RunsConceded=8 WHERE Name_of_the_Player='Suryakumar Yadav';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=18, ODI_Bat_Innings=61, T20I_Bat_Innings=71, IPL_Bat_Innings=115, Test_Bow_Innings=19, ODI_Bow_Innings=80, T20I_Bow_Innings=81, IPL_Bow_Innings=81, Test_NotOut=1, ODI_NotOut=9, T20I_NotOut=18, IPL_NotOut=39, Test_Ballfaced=720, ODI_Ballfaced=1603, T20I_Ballfaced=964, IPL_Ballfaced=1583, Test_Bowls=937, ODI_Bowls=3199, T20I_Bowls=1433, IPL_Bowls=1202, Test_RunsConceded=528, ODI_RunsConceded=2960, T20I_RunsConceded=1950, IPL_RunsConceded=1763 WHERE Name_of_the_Player='Hardik Pandya (VC)';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=98, ODI_Bat_Innings=130, T20I_Bat_Innings=34, IPL_Bat_Innings=173, Test_Bow_Innings=128, ODI_Bow_Innings=185, T20I_Bow_Innings=62, IPL_Bow_Innings=197, Test_NotOut=21, ODI_NotOut=46, T20I_NotOut=15, IPL_NotOut=71, Test_Ballfaced=4915, ODI_Ballfaced=3203, T20I_Ballfaced=367, IPL_Ballfaced=2093, Test_Bowls=16354, ODI_Bowls=9522, T20I_Bowls=1237, IPL_Bowls=3547, Test_RunsConceded=6620, ODI_RunsConceded=7748, T20I_RunsConceded=1453, IPL_RunsConceded=4495 WHERE Name_of_the_Player='Ravindra Jadeja';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=132, ODI_Bat_Innings=63, T20I_Bat_Innings=19, IPL_Bat_Innings=85, Test_Bow_Innings=178, ODI_Bow_Innings=114, T20I_Bow_Innings=65, IPL_Bow_Innings=194, Test_NotOut=15, ODI_NotOut=20, T20I_NotOut=12, IPL_NotOut=31, Test_Ballfaced=5832, ODI_Ballfaced=813, T20I_Ballfaced=160, IPL_Ballfaced=601, Test_Bowls=25113, ODI_Bowls=6303, T20I_Bowls=1452, IPL_Bowls=4194, Test_RunsConceded=11569, ODI_RunsConceded=5180, T20I_RunsConceded=1672, IPL_RunsConceded=4902 WHERE Name_of_the_Player='Ravichandran Ashwin';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=81, ODI_Bat_Innings=64, T20I_Bat_Innings=68, IPL_Bat_Innings=109, Test_NotOut=2, ODI_NotOut=13, T20I_NotOut=8, IPL_NotOut=20, Test_Ballfaced=5116, ODI_Ballfaced=2904, T20I_Ballfaced=1628, IPL_Ballfaced=3097 WHERE Name_of_the_Player='KL Rahul';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=3, ODI_Bat_Innings=24, T20I_Bat_Innings=29, IPL_Bat_Innings=85, Test_NotOut=2, ODI_NotOut=2, T20I_NotOut=1, IPL_NotOut=6, Test_Ballfaced=91, ODI_Ballfaced=913, T20I_Ballfaced=564, IPL_Ballfaced=1731 WHERE Name_of_the_Player='Ishan Kishan';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=16, ODI_Bat_Innings=25, T20I_Bat_Innings=6, IPL_Bat_Innings=34, Test_Bow_Innings=18, ODI_Bow_Innings=46, T20I_Bow_Innings=24, IPL_Bow_Innings=83, Test_NotOut=1, ODI_NotOut=6, T20I_NotOut=3, IPL_NotOut=10, Test_Ballfaced=481, ODI_Ballfaced=313, T20I_Ballfaced=38, IPL_Ballfaced=204, Test_Bowls=1335, ODI_Bowls=1940, T20I_Bowls=506, IPL_Bowls=1676, Test_RunsConceded=779, ODI_RunsConceded=2014, T20I_RunsConceded=772, IPL_RunsConceded=2560 WHERE Name_of_the_Player='Shardul Thakur';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=46, ODI_Bat_Innings=25, T20I_Bat_Innings=7, IPL_Bat_Innings=26, Test_Bow_Innings=58, ODI_Bow_Innings=84, T20I_Bow_Innings=61, IPL_Bow_Innings=120, Test_NotOut=17, ODI_NotOut=14, T20I_NotOut=5, IPL_NotOut=19, Test_Ballfaced=455, ODI_Ballfaced=156, T20I_Ballfaced=13, IPL_Ballfaced=66, Test_Bowls=6268, ODI_Bowls=4382, T20I_Bowls=1331, IPL_Bowls=2742, Test_RunsConceded=2815, ODI_RunsConceded=3355, T20I_RunsConceded=1455, IPL_RunsConceded=3380 WHERE Name_of_the_Player='Jasprit Bumrah';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=9, ODI_Bat_Innings=35, T20I_Bat_Innings=7, IPL_Bat_Innings=28, Test_Bow_Innings=14, ODI_Bow_Innings=94, T20I_Bow_Innings=31, IPL_Bow_Innings=71, Test_NotOut=0, ODI_NotOut=18, T20I_NotOut=3, IPL_NotOut=19, Test_Ballfaced=299, ODI_Ballfaced=315, T20I_Ballfaced=59, IPL_Ballfaced=175, Test_Bowls=1279, ODI_Bowls=4915, T20I_Bowls=687, IPL_Bowls=1488, Test_RunsConceded=733, ODI_RunsConceded=4159, T20I_RunsConceded=758, IPL_RunsConceded=2016 WHERE Name_of_the_Player='Kuldeep Yadav';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=89, ODI_Bat_Innings=47, T20I_Bat_Innings=3, IPL_Bat_Innings=25, Test_Bow_Innings=122, ODI_Bow_Innings=96, T20I_Bow_Innings=23, IPL_Bow_Innings=110, Test_NotOut=26, ODI_NotOut=20, T20I_NotOut=2, IPL_NotOut=12, Test_Ballfaced=1005, ODI_Ballfaced=255, T20I_Ballfaced=2, IPL_Ballfaced=79, Test_Bowls=11525, ODI_Bowls=4824, T20I_Bowls=477, IPL_Bowls=2426, Test_RunsConceded=6346, ODI_RunsConceded=4455, T20I_RunsConceded=711, IPL_RunsConceded=3411 WHERE Name_of_the_Player='Mohammed Shami';
+
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Bat_Innings=28, ODI_Bat_Innings=13, T20I_Bat_Innings=1, IPL_Bat_Innings=22, Test_Bow_Innings=39, ODI_Bow_Innings=36, T20I_Bow_Innings=8, IPL_Bow_Innings=79, Test_NotOut=11, ODI_NotOut=7, T20I_NotOut=0, IPL_NotOut=14, Test_Ballfaced=190, ODI_Ballfaced=92, T20I_Ballfaced=7, IPL_Ballfaced=111, Test_Bowls=3275, ODI_Bowls=1669, T20I_Bowls=192, IPL_Bowls=1634, Test_RunsConceded=1784, ODI_RunsConceded=1388, T20I_RunsConceded=294, IPL_RunsConceded=2326 WHERE Name_of_the_Player='Mohammed Siraj';
+
+
+
+# Batting average 
+SQL>SELECT (Test_Runs/(Test_Bat_Innings - Test_NotOut)) AS Test_Batting_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Rohit Sharma (C)';
+SQL>SELECT (ODI_Runs/(ODI_Bat_Innings - ODI_NotOut)) AS ODI_Batting_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Virat Kohli';
+SQL>SELECT (T20I_Runs/(T20I_Bat_Innings – T20I_NotOut)) AS T20I_Batting_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Suryakumar Yadav';
+
+# Batting Strike Rate 
+SQL>SELECT ((ODI_Runs/ODI_Ballfaced) *100) AS ODI_Batting_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Shubman Gill';
+SQL>SELECT ((Test_Runs/Test_Ballfaced) *100) AS Test_Batting_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Hardik Pandya (VC)';
+SQL>SELECT ((T20I_Runs/T20I_Ballfaced) *100) AS T20I_Batting_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Ishan Kishan';
+
+# Bowling average 
+SQL>SELECT (Test_RunsConceded /Test_Wickets) AS Test_Bowling_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Mohammed Shami';
+SQL>SELECT (ODI_RunsConceded /ODI_Wickets) AS ODI_Bowling_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Jasprit Bumrah';
+SQL>SELECT (T20I_RunsConceded /T20I_Wickets) AS T20I_Bowling_Average FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Mohammed Siraj';
+
+# Bowling Economy 
+SQL>SELECT (Test_RunsConceded /(Test_Bowls/6)) AS Test_Bowling_Economy FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Shardul Thakur';
+SQL>SELECT (ODI_RunsConceded /(ODI_Bowls/6)) AS ODI_Bowling_Economy FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Kuldeep Yadav';
+SQL>SELECT (T20I_RunsConceded /(T20I_Bowls/6)) AS T20I_Bowling_Economy FROM Indian_Squad_WC_2023 WHERE Name_of_The_Player='Ravichandran Ashwin';
+
+# WAQ to display Batting average where role is Batter. Note: Order by Accessing Order.
+
+SQL> SELECT Indian_Squad_WC_2023.Name_of_The_Player, Indian_Squad_WC2023.Role, (Indian_Squad_WC_2023.Test_Runs/( Indian_Squad_WC_2023.Test_Bat_Innings - Indian_Squad_WC_2023.Test_NotOut)) AS Test_Batting_Average FROM Indian_Squad_WC_2023 FULL JOIN Indian_Squad_WC2023 ON Indian_Squad_WC_2023.Name_of_The_Player = Indian_Squad_WC2023.Name_of_The_Player WHERE Role IN ('Batter', 'WK-Batter') ORDER BY Test_Batting_Average DESC;
+ SQL> SELECT Indian_Squad_WC_2023.Name_of_The_Player, Indian_Squad_WC2023.Role, (Indian_Squad_WC_2023.ODI_Runs/( Indian_Squad_WC_2023.ODI_Bat_Innings - Indian_Squad_WC_2023.ODI_NotOut)) AS ODI_Batting_Average FROM Indian_Squad_WC_2023 FULL JOIN Indian_Squad_WC2023 ON Indian_Squad_WC_2023.Name_of_The_Player = Indian_Squad_WC2023.Name_of_The_Player WHERE Role IN ('Batter', 'WK-Batter') ORDER BY ODI_Batting_Average DESC;
+
 

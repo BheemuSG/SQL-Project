@@ -170,4 +170,25 @@ SQL>SELECT (T20I_RunsConceded /(T20I_Bowls/6)) AS T20I_Bowling_Economy FROM Indi
 SQL> SELECT Indian_Squad_WC_2023.Name_of_The_Player, Indian_Squad_WC2023.Role, (Indian_Squad_WC_2023.Test_Runs/( Indian_Squad_WC_2023.Test_Bat_Innings - Indian_Squad_WC_2023.Test_NotOut)) AS Test_Batting_Average FROM Indian_Squad_WC_2023 FULL JOIN Indian_Squad_WC2023 ON Indian_Squad_WC_2023.Name_of_The_Player = Indian_Squad_WC2023.Name_of_The_Player WHERE Role IN ('Batter', 'WK-Batter') ORDER BY Test_Batting_Average DESC;
  SQL> SELECT Indian_Squad_WC_2023.Name_of_The_Player, Indian_Squad_WC2023.Role, (Indian_Squad_WC_2023.ODI_Runs/( Indian_Squad_WC_2023.ODI_Bat_Innings - Indian_Squad_WC_2023.ODI_NotOut)) AS ODI_Batting_Average FROM Indian_Squad_WC_2023 FULL JOIN Indian_Squad_WC2023 ON Indian_Squad_WC_2023.Name_of_The_Player = Indian_Squad_WC2023.Name_of_The_Player WHERE Role IN ('Batter', 'WK-Batter') ORDER BY ODI_Batting_Average DESC;
 
+# Adding Columns as Date(Debut date of each format).
+SQL> ALTER TABLE Indian_Squad_WC_2023 ADD (Test_Debut Date, ODI_Debut Date, T20I_Debut Date, IPL_Debut Date);
 
+# Updating Debut Date of each format.
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='06-Nov-2013', ODI_Debut='23-Jun-2007', T20I_Debut='19-Sep-2007', IPL_Debut='20-Apr-2008' WHERE Name_of_the_Player='Rohit Sharma (C)';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='26-Dec-2020', ODI_Debut='31-Jan-2019', T20I_Debut='03-Jan-2023', IPL_Debut='14-Apr-2018' WHERE Name_of_the_Player='Shubman Gill';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='20-Jun-2011', ODI_Debut='18-Aug-2008', T20I_Debut='12-Jun-2010', IPL_Debut='18-Apr-2008' WHERE Name_of_the_Player='Virat Kohli';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='25-Nov-2021', ODI_Debut='10-Dec-2017', T20I_Debut='01-Nov-2017', IPL_Debut='09-Apr-2015' WHERE Name_of_the_Player='Shreyas Iyer';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='09-Feb-2023', ODI_Debut='18-Jul-2021', T20I_Debut='14-Mar-2021', IPL_Debut='06-Apr-2012' WHERE Name_of_the_Player='Suryakumar Yadav';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='26-Jul-2017', ODI_Debut='16-Oct-2016', T20I_Debut='26-Jan-2016', IPL_Debut='19-Apr-2015' WHERE Name_of_the_Player='Hardik Pandya (VC)';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='13-Dec-2012', ODI_Debut='08-Feb-2009', T20I_Debut='10-Feb-2009', IPL_Debut='19-Apr-2008' WHERE Name_of_the_Player='Ravindra Jadeja';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='06-Nov-2011', ODI_Debut='05-Jun-2010', T20I_Debut='12-Jun-2010', IPL_Debut='18-Apr-2009' WHERE Name_of_the_Player='Ravichandran Ashwin';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='26-Dec-2014', ODI_Debut='11-Jun-2016', T20I_Debut='18-Jun-2016', IPL_Debut='11-Apr-2013' WHERE Name_of_the_Player='KL Rahul';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='12-Jul-2023', ODI_Debut='18-Jul-2021', T20I_Debut='14-Mar-2016', IPL_Debut='11-Apr-2016' WHERE Name_of_the_Player='Ishan Kishan';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='12-Oct-2018', ODI_Debut='31-Aug-2017', T20I_Debut='21-Feb-2018', IPL_Debut='01-May-2015' WHERE Name_of_the_Player='Shardul Thakur';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='05-Jan-2018', ODI_Debut='23-Jan-2016', T20I_Debut='26-Jan-2016', IPL_Debut='04-Apr-2015' WHERE Name_of_the_Player='Jasprit Bumrah';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='25-Mar-2017', ODI_Debut='23-Jun-2017', T20I_Debut='07-Jul-2017', IPL_Debut='13-Apr-2016' WHERE Name_of_the_Player='Kuldeep Yadav';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='06-Nov-2013', ODI_Debut='06-Jan-2013', T20I_Debut='24-Mar-2014', IPL_Debut='08-Apr-2013' WHERE Name_of_the_Player='Mohammed Shami';
+SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='26-Dec-2020', ODI_Debut='15-Jan-2019', T20I_Debut='04-Nov-2017', IPL_Debut='19-Apr-2017' WHERE Name_of_the_Player='Mohammed Siraj';
+
+# WAQ to display who all Test debut between '01-Jan-2011' and '31-Dec-2022'
+SQL> Select Name_of_the_Player, No_of_Test, Test_Debut from Indian_squad_wc_2023 where Test_Debut between '01-Jan-2011' and '31-Dec-2022' order by Test_Debut asc;

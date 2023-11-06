@@ -189,5 +189,8 @@ SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='25-Mar-2017', ODI_Debut='23-Jun
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='06-Nov-2013', ODI_Debut='06-Jan-2013', T20I_Debut='24-Mar-2014', IPL_Debut='08-Apr-2013' WHERE Name_of_the_Player='Mohammed Shami';
 SQL> UPDATE Indian_Squad_WC_2023 SET Test_Debut='26-Dec-2020', ODI_Debut='15-Jan-2019', T20I_Debut='04-Nov-2017', IPL_Debut='19-Apr-2017' WHERE Name_of_the_Player='Mohammed Siraj';
 
-# WAQ to display who all Test debut between '01-Jan-2011' and '31-Dec-2022'
+# WAQ to display who all Test debut between two Dates.
 SQL> Select Name_of_the_Player, No_of_Test, Test_Debut from Indian_squad_wc_2023 where Test_Debut between '01-Jan-2011' and '31-Dec-2022' order by Test_Debut asc;
+SQL> Select Name_of_the_Player, No_of_ODI, ODI_Debut from Indian_squad_wc_2023 where ODI_Debut between '01-Jan-2011' and '31-Dec-2020' order by ODI_Debut asc;
+SQL> Select Name_of_the_Player, No_of_T20I, T20I_Debut from Indian_squad_wc_2023 where T20I_Debut between '01-Jan-2007' and '31-Dec-2010' order by T20I_Debut asc;
+

@@ -2,7 +2,6 @@
 
 SQL> CREATE TABLE Indian_Squad_WC_2023 (Name_of_the_Player varchar (30), No_of_Test Number (3), No_of_ODI Number (3), No_of_T20I Number (3), No_of_IPL Number (3));
 SQL> DESC Indian_Squad_WC_2023;
-SQL>INSERT INTO Indian_Squad_WC_2023 (Name_of_the_Player, No_of_Test, No_of_ODI, No_of_T20I, No_of_IPL) VALUES ('Mohammed Siraj', 21, 36, 8, 79);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Rohit Sharma (C)’, 52, 256, 148, 243);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Shubman Gill', 18, 39, 11, 91);
 SQL> INSERT INTO Indian_Squad_WC_2023 VALUES ('Virat Kohli', 111, 287, 115, 237);
